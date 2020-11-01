@@ -1,0 +1,11 @@
+{
+  "name": "cv-online",
+  "version": "1.0.0",
+  "description": "curriculum online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Humberto Morales Oliviere",
+  "license": "MIT"
+}
