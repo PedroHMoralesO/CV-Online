@@ -1,6 +1,91 @@
 
+/* seccion raiz */
+
 :root{
     --black-color: #252424;
     --white-color: white;
+    --letras-obscuras: gray;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*  inicia la seccion de la barra de navegacion */
+
+.nav-bar{
+    margin-top: -100px;
+    background-color: var(--black-color);
+    display: grid;
+    grid-template: 100px / 1fr 1fr;
+    grid-template-areas: "navLogo navLogo";
+
+}
+
+.nav-img-container{
+    align-items: center;
+    margin: auto;
+    grid-area: navLogo;
+}
+
+#logo{
+    width: 320px;
+    height: 100px;
+}
+
+/* contenedor general */
+
+.main-container{
+    background-color: var(--black-color);
+    display: grid;
+    grid-template: 1fr / 1fr;  
+}
+
+/* seccion Hero */
+
+.hero{
+    background-color: var(--black-color);
+    display: grid;
+    grid-template: 70px 250px 100px / 1fr;
+    grid-template-areas: 
+    "saludo"
+    "fotoPerfil"
+    "saludo2"
+     ;
+    text-align: center;
+}
+
+.init{
+    grid-area: saludo;
+    margin: 0 2px;
+    font-family: 'Fjalla One', sans-serif;
+    color: var(--letras-obscuras);
+}
+
+.init strong{
+    color: var(--white-color);
+}
+
+.hero-img{
+    grid-area: fotoPerfil;
+    width: 100%;
+    height: 250px;
+    background-image: url('https://ihoqig.dm.files.1drv.com/y4mSrJu2RCDKpy5ZFr9C6MIa_4ACcTEQA8TElpHusXfcsjt1Iuvt6ThT-DJ65cRoGqIo_3lufpongOUBkqEJvdH3CDGOfgvifuUuOWAzEFkelvmiVF36AChKyhmvejeN5kn-mRXHO_TPuepQ79Y-deyBTAdd0KuXp9B8505nMicflC3AMPAJANfX7Ew75iZlkxlbPWXcTWacqR4OawjywroGA?');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.greting{
+    grid-area: saludo2;
+    padding-top: 2px;
+    font-family: 'Fjalla One', sans-serif;
+    color: var(--letras-obscuras);
+}
+
+.greting strong{
+    color: var(--white-color);
+}
