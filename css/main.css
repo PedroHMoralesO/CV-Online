@@ -8,14 +8,15 @@
 }
 
 body {
-    margin: 0;
+    margin: 2px;
     padding: 0;
+    background-color: var(--black-color);
 }
 
 /*  inicia la seccion de la barra de navegacion */
 
 .nav-bar{
-    margin-top: -100px;
+    margin-top: -90px;
     background-color: var(--black-color);
     display: grid;
     grid-template: 100px / 1fr 1fr;
@@ -37,9 +38,11 @@ body {
 /* contenedor general */
 
 .main-container{
+    margin: 0;
     background-color: var(--black-color);
     display: grid;
-    grid-template: 1fr / 1fr;  
+    grid-template: 1fr / 1fr;
+    gap: 2px;
 }
 
 /* seccion Hero */
@@ -47,18 +50,23 @@ body {
 .hero{
     background-color: var(--black-color);
     display: grid;
-    grid-template: 70px 250px 100px / 1fr;
+    grid-template: 73px 350px 100px / 1fr;
     grid-template-areas: 
     "saludo"
     "fotoPerfil"
     "saludo2"
      ;
     text-align: center;
+    margin: 0;
+    border-bottom: 2px solid red;
+    gap: 2px;
 }
 
 .init{
+    width: 100%;
+    height: 100%;
     grid-area: saludo;
-    margin: 0 2px;
+    padding: 0 2px;
     font-family: 'Fjalla One', sans-serif;
     color: var(--letras-obscuras);
 }
@@ -67,21 +75,34 @@ body {
     color: var(--white-color);
 }
 
-.hero-img{
+.hero-img-wrap{
     grid-area: fotoPerfil;
+    margin: 0;
     width: 100%;
-    height: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-color);
+    
+
+}
+
+.hero-img{
+    margin: 0;
+    width: 70%;
+    height: 70%;
+    border: .1px solid var(--black-color);
+    border-radius: 50%;
     background-image: url('https://ihoqig.dm.files.1drv.com/y4mSrJu2RCDKpy5ZFr9C6MIa_4ACcTEQA8TElpHusXfcsjt1Iuvt6ThT-DJ65cRoGqIo_3lufpongOUBkqEJvdH3CDGOfgvifuUuOWAzEFkelvmiVF36AChKyhmvejeN5kn-mRXHO_TPuepQ79Y-deyBTAdd0KuXp9B8505nMicflC3AMPAJANfX7Ew75iZlkxlbPWXcTWacqR4OawjywroGA?');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    border: 1px solid transparent;
-    border-radius: 50%;
+    background-size: 350px 250px;
 }
 
 .greting{
     grid-area: saludo2;
-    padding-top: 2px;
+    padding: 0 2px;
     font-family: 'Fjalla One', sans-serif;
     color: var(--letras-obscuras);
 }
