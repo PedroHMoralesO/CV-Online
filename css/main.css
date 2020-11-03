@@ -3,7 +3,7 @@
 
 :root{
     --black-color: #252424;
-    --white-color: white;
+    --white-color: rgb(226 226 226);
     --letras-obscuras: gray;
 }
 
@@ -58,7 +58,6 @@ body {
      ;
     text-align: center;
     margin: 0;
-    border-bottom: 2px solid red;
     gap: 2px;
 }
 
@@ -109,4 +108,74 @@ body {
 
 .greting strong{
     color: var(--white-color);
+}
+
+/* termina seccion Hero */
+
+/* inicia seccion Summary */
+
+.summary{
+    position: relative; 
+    margin-bottom: 1px; 
+    width: 100%; 
+    background-color: var(--black-color);
+    overflow: hidden;
+}
+
+.input-summary{
+    position: absolute; 
+    opacity: 0; 
+    z-index: -1; 
+}
+
+.label-summary{
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    position: relative; 
+    display: block; 
+    padding: 0 0 0 1em; 
+    background: gray; 
+    font-weight: bold; 
+    font-size: 22px;
+    line-height: 3; 
+    cursor: pointer; 
+    border: 2px solid red;
+    border-radius: 25px;
+}
+
+.summary-content{
+    max-height: 0; 
+    overflow: hidden; 
+    color:#000; 
+    background-color: var(--white-color);
+    -webkit-transition: max-height .15s; 
+    -o-transition: max-height .15s; 
+    transition: max-height .15s;
+    border: 2px solid var(--black-color);
+    border-radius: 25px;
+}
+
+.summary-content p , ol , h4{
+    margin: 1em; 
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.summary-content p{
+    border-bottom: 3px solid var(--black-color);
+}
+
+.summary-content ol{
+    font-weight: bold;
+    text-align: left;
+    margin-left: -24px;
+}
+
+/* summary checked (cuando dan clic al label y se desplegara el texto) */
+
+.input-summary:checked ~ .summary-content { 
+    max-height: 1500px; 
+} 
+
+#exception, #exception2 {
+    border-bottom: 2px solid var(--white-color);
 }
